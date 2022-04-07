@@ -23,6 +23,10 @@ body {
     justify-content: space-between;
 }
 
+.d-none {
+    display: none !important;
+}
+
 a {
     color: $accent;
 }
@@ -147,6 +151,13 @@ div {
     width: 105px;
 }
 
+.disabled {
+    color: #8d8d8d;
+    background: #e5e5e5 !important;
+    border-color: #F4F4F4;
+    pointer-events: none;
+}
+
 /* header */ 
 
 .header {
@@ -156,8 +167,11 @@ div {
     width: 100%;
     body.page & {
         background: url(../images/bg-page.png) top 60px center no-repeat, linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(235,234,250,1) 100%);
+        @media (min-width: 1921px) {
+            background-size: 100%;
+        }
     }
-    @media (min-width: 1920px) {
+    @media (min-width: 1921px) {
         background-size: 100%;
     }
     @media (max-width: 1199px) {
@@ -171,7 +185,7 @@ div {
     &__img {
         position: absolute;
         width: 100%;
-        height: 960px;
+        height: 100%;
         overflow-x: hidden;
         top: 0;
         z-index: 1;
@@ -191,6 +205,9 @@ div {
                 width: 100%;
                 left: 0;
                 margin-left: 0;
+            }
+            @media (min-width: 2100px) {
+                top: 0;
             }
             @media (max-width: 600px) {
                 display: none;
@@ -520,6 +537,7 @@ div {
         }
     }
     &__bl-2 {
+        & > a,
         & > div {
             text-decoration: none;
             color: $blueDark;
@@ -734,6 +752,9 @@ div {
         @media (max-width: 1024px) {
             display: none;
         }
+        &-blur {
+            width: 100%;
+        }
     }
 }
 
@@ -904,6 +925,12 @@ div {
         @media (max-width: 500px) {
             margin-bottom: 0;
         }
+        & a {
+            font-size: 16px;
+            color: #e900e6;
+            margin-bottom: 20px;
+            text-decoration: none;
+        }
         & span {
             padding-left: 5px;
             @media (max-width: 500px) {
@@ -1062,6 +1089,16 @@ div {
     }
     &__gnft {
         margin-top: 0;
+        justify-content: center;
+        & .wrapper-bl {
+            margin: 0 20px;
+            &:first-child {
+                margin-left: 0;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
         & .wrapper-bl::before {
             left: 8px;
             top: 8px;
@@ -1607,6 +1644,9 @@ only screen and (min-width:768px) and (max-width:991px) {
 
 
 .block-6 {
+    &__wrap {
+        justify-content: center;
+    }
     &__item {
         width: 32%;
         background: #FFFFFF;
@@ -1614,9 +1654,16 @@ only screen and (min-width:768px) and (max-width:991px) {
         box-shadow: 0px 0px 71px 25px rgba(228, 217, 245,0.53);
         padding: 22px 20px;
         box-sizing: border-box;
+        margin: 0 10px;
         @media (max-width: 991px) {
             width: 100%;
             margin-bottom: 30px;
+        }
+        &:first-child {
+            margin-left: 0;
+        }
+        &:last-child {
+            margin-right: 0;
         }
     }
     &__title {
@@ -1715,6 +1762,9 @@ footer {
     background: url(../images/bg-footer.png) bottom 0 center no-repeat;
     padding-bottom: 60px;
     padding-top: 200px;
+    @media (min-width: 1920px) {
+        background-size: 100%;
+    }
     @media (max-width: 600px) {
         padding-top: 60px;
         padding-bottom: 30px;

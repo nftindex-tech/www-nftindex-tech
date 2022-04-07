@@ -20,6 +20,10 @@ body {
   justify-content: space-between;
 }
 
+.d-none {
+  display: none !important;
+}
+
 a {
   color: #7469f0;
 }
@@ -156,6 +160,13 @@ div {
   width: 105px;
 }
 
+.disabled {
+  color: #8d8d8d;
+  background: #e5e5e5 !important;
+  border-color: #F4F4F4;
+  pointer-events: none;
+}
+
 /* header */
 .header {
   background: #ebeafa;
@@ -168,7 +179,13 @@ body.page .header {
   background: url(../images/bg-page.png) top 60px center no-repeat, linear-gradient(180deg, white 0%, #ebeafa 100%);
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1921px) {
+  body.page .header {
+    background-size: 100%;
+  }
+}
+
+@media (min-width: 1921px) {
   .header {
     background-size: 100%;
   }
@@ -191,7 +208,7 @@ body.page .header {
 .header__img {
   position: absolute;
   width: 100%;
-  height: 960px;
+  height: 100%;
   overflow-x: hidden;
   top: 0;
   z-index: 1;
@@ -219,6 +236,12 @@ body.page .header {
     width: 100%;
     left: 0;
     margin-left: 0;
+  }
+}
+
+@media (min-width: 2100px) {
+  .header__img-lines {
+    top: 0;
   }
 }
 
@@ -651,6 +674,7 @@ body.page .header {
   }
 }
 
+.gnft__bl-2 > a,
 .gnft__bl-2 > div {
   text-decoration: none;
   color: #2e3280;
@@ -662,17 +686,20 @@ body.page .header {
 }
 
 @media (max-width: 600px) {
+  .gnft__bl-2 > a,
   .gnft__bl-2 > div {
     display: block;
     margin-bottom: 25px;
   }
 }
 
+.gnft__bl-2 > a:hover,
 .gnft__bl-2 > div:hover {
   color: #7469f0;
   transition: 0.5s;
 }
 
+.gnft__bl-2 > a.button-polygon::before,
 .gnft__bl-2 > div.button-polygon::before {
   content: '';
   width: 35px;
@@ -684,6 +711,7 @@ body.page .header {
   left: 0;
 }
 
+.gnft__bl-2 > a.button-ethereum::before,
 .gnft__bl-2 > div.button-ethereum::before {
   content: '';
   width: 35px;
@@ -910,6 +938,10 @@ body.page .header {
   .page__img {
     display: none;
   }
+}
+
+.page__img-blur {
+  width: 100%;
 }
 
 .header-main {
@@ -1146,6 +1178,13 @@ body.page .header {
   }
 }
 
+.header-main__id a {
+  font-size: 16px;
+  color: #e900e6;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
 .header-main__id span {
   padding-left: 5px;
 }
@@ -1346,6 +1385,19 @@ body.gnft .block-1__faza-2 .wrap-bl {
 
 .block-1__gnft {
   margin-top: 0;
+  justify-content: center;
+}
+
+.block-1__gnft .wrapper-bl {
+  margin: 0 20px;
+}
+
+.block-1__gnft .wrapper-bl:first-child {
+  margin-left: 0;
+}
+
+.block-1__gnft .wrapper-bl:last-child {
+  margin-right: 0;
 }
 
 .block-1__gnft .wrapper-bl::before {
@@ -1948,6 +2000,10 @@ body.gnft .block-1__faza-2 .wrap-bl {
 }
 
 /* end copy */
+.block-6__wrap {
+  justify-content: center;
+}
+
 .block-6__item {
   width: 32%;
   background: #FFFFFF;
@@ -1955,6 +2011,7 @@ body.gnft .block-1__faza-2 .wrap-bl {
   box-shadow: 0px 0px 71px 25px rgba(228, 217, 245, 0.53);
   padding: 22px 20px;
   box-sizing: border-box;
+  margin: 0 10px;
 }
 
 @media (max-width: 991px) {
@@ -1962,6 +2019,14 @@ body.gnft .block-1__faza-2 .wrap-bl {
     width: 100%;
     margin-bottom: 30px;
   }
+}
+
+.block-6__item:first-child {
+  margin-left: 0;
+}
+
+.block-6__item:last-child {
+  margin-right: 0;
 }
 
 .block-6__title {
@@ -2091,6 +2156,12 @@ footer {
   background: url(../images/bg-footer.png) bottom 0 center no-repeat;
   padding-bottom: 60px;
   padding-top: 200px;
+}
+
+@media (min-width: 1920px) {
+  footer {
+    background-size: 100%;
+  }
 }
 
 @media (max-width: 600px) {
