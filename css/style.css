@@ -2221,7 +2221,7 @@ footer p a:hover {
 .help-text {
   display: none;
   position: relative;
-  max-width: 180px;
+  max-width: 200px;
   font-weight: 400;
   margin-right: 20px;
   font-size: 18px;
